@@ -15,7 +15,7 @@ from read_json import read_js
 try:
 	print("Press CTRL + C for stop this script!")
 
-	def long_string(display, text = '', num_line = 1, num_cols = 20):
+	def long_string(display, text = '', num_line = 2, num_cols = 16):
 		""" 
 		Parameters: (driver, string to print, number of line to print, number of columns of your display)
 		Return: This function send to display your scrolling string.
