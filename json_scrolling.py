@@ -9,6 +9,7 @@ import time
 # Load the driver and set it to "display"
 # If you use something from the driver library use the "display." prefix first
 display = lcddriver.lcd()
+from read_json import read_js
 
 # Main body of code
 try:
@@ -32,17 +33,18 @@ try:
 
 
 	# Example of short string
-	long_string(display, "Hello World!", 1)
+	long_string(display, read_js(1), 1)
+	
 	time.sleep(1)
 
 	# Example of long string
-	long_string(display, "Hello again. This is a long text.", 2)
+	long_string(display, read_js(2), 2)
 	display.lcd_clear()
 	time.sleep(1)
 
 	while True:
 		# An example of infinite scrolling text
-		long_string(display, "Hello friend! This is a long text!", 2)
+		long_string(display, read_js(2), 2)
 
 except KeyboardInterrupt: # If there is a KeyboardInterrupt (when you press ctrl+c), exit the program and cleanup
 	print("Cleaning up!")
