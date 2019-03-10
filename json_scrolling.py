@@ -33,17 +33,15 @@ try:
 
 
 	# Example of short string
-	long_string(display, read_js(1), 1)
-	
+	long_string(display, read_js(1), 1)	
 	time.sleep(1)
-
 	# Example of long string
 	long_string(display, read_js(2), 2)
 	display.lcd_clear()
 	time.sleep(1)
-
 	while True:
 		# An example of infinite scrolling text
+		long_string(display, read_js(2), 2)
 		long_string(display, read_js(2), 2)
 
 except KeyboardInterrupt: # If there is a KeyboardInterrupt (when you press ctrl+c), exit the program and cleanup
